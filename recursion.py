@@ -1,4 +1,4 @@
-for i in range(5,0,-1):
+"""for i in range(5,0,-1):
     print(i)
 
 print("happy newyear")
@@ -23,6 +23,7 @@ def factorial(n):
     
 print(factorial(5))
 
+#sum
 def sum(n):
     if n==1:
         return 1
@@ -31,6 +32,7 @@ def sum(n):
     
 print(sum(5))
 
+#name
 def name(n):
     if n==1:
         print("nusaybah")
@@ -39,6 +41,7 @@ def name(n):
         name(n-1)
 name(5)
 
+#reverse
 def reverse(n):
     if n=="":
         return ""
@@ -48,7 +51,6 @@ def reverse(n):
 print(reverse("python"))
 
 #sierpinski
-
 import turtle
 
 def triangles(size,order):
@@ -80,4 +82,12 @@ def exponants(b,e):
     else:
         return b*exponants(b,e-1)
 
-print(exponants(2,0))
+print(exponants(2,0))"""
+
+def fibonacci(b,e,n):
+    if n==0:
+        return b
+    else:
+        return fibonacci(e,b+e,n-1)
+    
+print(fibonacci(0,1,4))

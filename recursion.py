@@ -84,10 +84,10 @@ def exponants(b,e):
 
 print(exponants(2,0))"""
 
-def fibonacci(b,e,n):
+def fibonacci(n,b=0,e=1):
     if n==0:
         return b
     else:
         return fibonacci(e,b+e,n-1)
     
-print(fibonacci(0,1,4))
+print(fibonacci(4))

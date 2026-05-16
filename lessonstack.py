@@ -1,4 +1,4 @@
-class stack:
+"""class stack:
     def __init__(self,n):
         self.stack=[]
         self.n=n
@@ -20,7 +20,7 @@ class stack:
     def size(self):
         return len(self.stack)
     def display(self):
-        print(self.stack)
+        print(self.stack)"""
 
 #program to reverse a string with stack
 
@@ -39,7 +39,7 @@ print(w)"""
 
 #program to simulate undo
 
-stack=[]
+"""stack=[]
 current=""
 
 def add(word):
@@ -63,4 +63,37 @@ print(current)
 
 undo()
 
-print(current)
+print(current)"""
+
+def merge(arr):
+    l=[]
+    for i in arr:
+        if i%2==0:
+            l.append(i)
+    if len(l)>1:
+        mid=len(l)//2
+        left=l[:mid]
+        right=l[mid:]
+        merge(left)
+        merge(right)
+        i=j=k=0
+        while i<len(left) and j<len(right):
+            if left[i]>right[j]:
+                l[k]=left[i]
+                i+=1
+            else:
+                l[k]=right[j]
+                j+=1
+            k+=1
+        while i<len(left):
+            l[k]=left[i]
+            i+=1
+            k+=1
+        while j<len(right):
+            l[k]=right[j]
+            j+=1
+            k+=1
+    return l
+    
+array=[23,45,76,27,28,91,75,36]
+print(merge(array))

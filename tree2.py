@@ -11,7 +11,7 @@ def inorder(root):
         print(root.data)
         if root.right is not None:
             inorder(root.right)
-        print(root.data)
+
 
 def insert(root,value):
     if root==None:
@@ -28,7 +28,7 @@ def search(root,find):
     elif root.data>find and root.left is not None:
         return search(root.left,find)
     elif root.data<find and root.right is not None:
-        return search(root.left,find)
+        return search(root.right,find)
     else:
         return -1
 
